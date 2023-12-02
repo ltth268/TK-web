@@ -1,0 +1,32 @@
+
+body{
+    border: 1px solid rgb(255, 255, 255);
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto Slab';
+}
+h1{
+    color:rgb(19, 151, 151);
+}
+h2{
+    color: white;
+    background-color: rgb(66, 189, 189);
+}
+#chuyenmau a:hover {
+    color: rgb(228, 228, 19);
+  }
+.no-underline {
+    text-decoration: none;
+  }
+h3{
+    text-align: center;
+    background-color: rgb(194, 186, 186);
+    width: 560px;
+    height:450 ;
+    padding-top: 1px;
+    padding-right: auto;
+    padding-left: auto;
+    color: rgb(66, 68, 189);
+    font-size: 15px;
+}
