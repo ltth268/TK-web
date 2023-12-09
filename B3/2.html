@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: white;
+   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(84, 145, 147);
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.row{
+  box-sizing: border-box;
+     background-color: rgb(84, 145, 147);
+     border: 15px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Children's Book</h1>
+  </div>
+<div class="row">
+  <div class="column">
+    <a><img src="https://images.huffingtonpost.com/2015-03-12-1426140402-9909456-GrandadsIsland.jpg" alt="" width="450" height= "300"></a>
+    <p>Đây là một cuốn sách thiếu nhi của tác giả Benji Davies. Cuốn sách này kể về câu chuyện của một cậu bé tên là Syd và ông nội của cậu, Grandad. Nội dung của cuốn sách xoay quanh chuyến phiêu lưu kỳ diệu của Syd và ông nội trên một hòn đảo bí ẩn</p>
+  </div>
+  <div class="column">
+    <a><img src="https://cdn.pixabay.com/photo/2016/10/24/10/53/witchs-house-1765791_1280.jpg" alt="" width="450" height= "300"></a>
+                <p>"Knusper Knusper Knäuschen" là một câu chuyện cổ tích nổi tiếng nguồn gốc từ Đức. Câu chuyện này còn được biết đến với tên gọi khác là "Hansel và Gretel". Nó kể về cuộc phiêu lưu của hai anh em Hansel và Gretel khi họ bị bỏ rơi trong rừng</p>
+  </div>
+  
+  <div class="column">
+    <a></a><img src="https://www.washingtonpost.com/resizer/kTfRpr3VVx9fYbtU6b2zSvyR8FY=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/DP6AKUHDNII6RN2ZHWEKLTU6DE.jpg" alt="" width="450" height= "300"></a>
+                <p>"The Little Squeegy Bug" là một cuốn sách thiếu nhi của tác giả Bill Martin Jr. và tác giả và minh họa Michael Sampson. Cuốn sách này kể về cuộc phiêu lưu của một con côn trùng nhỏ gọi là Squeegy Bug</p>
+  </div>
+</div>
+</body>
+</html>
+
+
