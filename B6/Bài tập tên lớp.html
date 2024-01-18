@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài tập trên lớp</title>
+        <script type="text/javascript">
+            function hienthianh(dovat){
+                if(dovat=="meo"){
+                    document.write("<img src='Meo.jpg'>");
+                }else{
+                    document.write("<img src='chuot.jpg'>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Hãy chọn con vật mà bạn thích:</p>
+        <input type="button" value="Mèo" onclick="hienthianh('meo');"/>
+        <input type="button" value="Chuột" onclick="hienthianh('chuot');"/>
+    </body>
+</html>

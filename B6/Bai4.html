@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bài 4</title>
+        <script>
+            function validateForm() {
+              event.preventDefault();
+            }
+          </script>
+        <style>
+        body{
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        </style>
+        <head>
+    <body>
+    <h1>Form Đăng Ký</h1>
+    <form action="" onsubmit=" return validateForm()">
+        <p>Họ <input type="text" id="txt_ho" size="20" required ></p>
+        <p>Tên <input type="text" name="txt_ten" size="20" required ></p>
+        <p>Ngày sinh: Ngày <select size="1" name="op_ngay" required>
+            <option selected value="">1</option>
+            <option selected value="">2</option>
+            <option selected value="">3</option>
+            <option selected value="">4</option>
+            <option selected value="">5</option>
+            <option selected value="">6</option>
+            <option selected value="">7</option>
+            <option selected value="">8</option>
+            <option selected value="">9</option>
+            <option selected value="">10</option>
+            <option selected value="">11</option>
+            <option selected value="">12</option>
+            <option selected value="">13</option>
+            <option selected value="">14</option>
+            <option selected value="">15</option>
+            <option selected value="">16</option>
+            <option selected value="">17</option>
+            <option selected value="">18</option>
+            <option selected value="">19</option>
+            <option selected value="">20</option>
+            <option selected value="">21</option>
+            <option selected value="">22</option>
+            <option selected value="">23</option>
+            <option selected value="">24</option>
+            <option selected value="">25</option>
+            <option selected value="">26</option>
+            <option selected value="">27</option>
+            <option selected value="">28</option>
+            <option selected value="">29</option>
+            <option selected value="">30</option>
+            <option selected value="">31</option>
+        </select>
+        Tháng <select size="1" name="op_thang" required>
+            <option selected value="">1</option>
+            <option selected value="">2</option>
+            <option selected value="">3</option>
+            <option selected value="">4</option>
+            <option selected value="">5</option>
+            <option selected value="">6</option>
+            <option selected value="">7</option>
+            <option selected value="">8</option>
+            <option selected value="">9</option>
+            <option selected value="">10</option>
+            <option selected value="">11</option>
+            <option selected value="">12</option>
+
+        </select>
+        Năm <select size="1" name="op_nam" required>
+            <option selected value="">2014</option>
+            <option selected value="">2015</option>
+            <option selected value="">2016</option>
+            <option selected value="">2017</option>
+            <option selected value="">2019</option>
+            <option selected value="">2018</option>
+            <option selected value="">2020</option>
+            <option selected value="">2021</option>
+            <option selected value="">2022</option><option selected value="1">2020</option>
+            <option selected value="">2023</option>
+            <option selected value="">2024</option>
+            </select>
+        </p>
+        <p><label for="gender">Giới tính:</label>
+    <input type="radio" id="male" name="gender" value="Nam" required>
+    <label for="male">Nam</label>
+    <input type="radio" id="female" name="gender" value="Nữ" required>
+    <label for="female">Nữ</label></p>
+    <p>Số điện thoại <input type="text" id="txt_ho" size="20" pattern="[0-9]{10}" required></p>
+        <p>
+            <label for="hobbies">Sở thích:</label>
+            <input type="radio" id="read" name="hobbies" value="Đọc sách" required>
+            <label for="read">Đọc sách</label>
+            <input type="radio" id="watch" name="hobbies" value="Xem phim" required>
+            <label for="watch">Xem phim</label>
+            <input type="radio" id="listen" name="hobbies" value="Nghe nhạc" required>
+            <label for="listen">Nghe nhạc</label>
+            <input type="radio" id="play" name="hobbies" value="Đá bóng" required>
+            <label for="play">Đá bóng</label>
+          </p>
+          <p>Khác <input type="text" size="20"></p>
+        <br>
+  <input type="submit" value="Submit"><input type="reset" value="Reset">
+    </form>
+    </body>
+</html>
