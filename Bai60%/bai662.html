@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bài 6</title>
+    <link rel="stylesheet" href="bai6.css">
+    <style>
+        body{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.red-text {
+    color: red;
+}
+    </style>
+    <script>
+        function tinhtong() {
+    var so1 = parseFloat(document.getElementById("txt_so1_cong").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_cong").value);
+    var ketqua = so1 + so2;
+    document.getElementById("txt_ketquatong").value = ketqua;
+    var phepcong = so1 + " + " + so2 + " = " + ketqua;
+    document.getElementById("txt_phepcong").textContent = phepcong;
+    document.getElementById("txt_phepcong").classList.add("red-text");
+}
+
+function tinhhieu() {
+    var so1 = parseFloat(document.getElementById("txt_so1_tru").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_tru").value);
+    var ketqua = so1 - so2;
+    document.getElementById("txt_ketquahieu").value = ketqua;
+    var phepcong = so1 + " - " + so2 + " = " + ketqua;
+    document.getElementById("txt_pheptru").textContent = phepcong;
+    document.getElementById("txt_pheptru").classList.add("red-text");
+}
+
+function tinhtich() {
+    var so1 = parseFloat(document.getElementById("txt_so1_nhan").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_nhan").value);
+    var ketqua = so1 * so2;
+    document.getElementById("txt_ketquanhan").value = ketqua;
+    var phepcong = so1 + " * " + so2 + " = " + ketqua;
+    document.getElementById("txt_phepnhan").textContent = phepcong;
+    document.getElementById("txt_phepnhan").classList.add("red-text");
+}
+
+function tinhthuong() {
+    var so1 = parseFloat(document.getElementById("txt_so1_chia").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_chia").value);
+    var ketqua = so1 / so2;
+    document.getElementById("txt_ketquachia").value = ketqua;
+    var phepcong = so1 + " / " + so2 + " = " + ketqua;
+    document.getElementById("txt_phepchia").textContent = phepcong;
+    document.getElementById("txt_phepchia").classList.add("red-text");
+}
+    </script> 
+</head>
+<body>
+    <div class="details-container">
+    <h1>Các phép toán</h1>
+    <p>Phép Cộng</p>
+    <input type="text" id="txt_so1_cong" size="20" required>
+    +
+    <input type="text" id="txt_so2_cong" size="20" required>
+    <button onclick="tinhtong()">=</button>
+    <input type="text" id="txt_ketquatong" size="20" required>
+    
+    <p>Phép Trừ</p>
+    <input type="text" id="txt_so1_tru" size="20" required>
+    -
+    <input type="text" id="txt_so2_tru" size="20" required>
+    <button onclick="tinhhieu()">=</button>
+    <input type="text" id="txt_ketquahieu" size="20" required>
+    
+    <p>Phép Nhân</p>
+    <input type="text" id="txt_so1_nhan" size="20" required>
+    *
+    <input type="text" id="txt_so2_nhan" size="20" required>
+    <button onclick="tinhtich()">=</button>
+    <input type="text" id="txt_ketquanhan" size="20" required>
+    
+    <p>Phép Chia</p>
+    <input type="text" id="txt_so1_chia" size="20" required>
+    ÷
+    <input type="text" id="txt_so2_chia" size="20" required>
+    <button onclick="tinhthuong()">=</button>
+    <input type="text" id="txt_ketquachia" size="20" required>
+    <h1>Các phép toán vừa tính</h1>
+    <table style="width: 70%;">
+        <tr>
+            <td>PHÉP CỘNG</td>
+            <td>PHÉP TRỪ</td>
+            <td>PHÉP NHÂN</td>
+            <td>PHÉP CHIA</td>
+        </tr>
+        <tr>
+            <td id="txt_phepcong"></td>
+            <td id="txt_pheptru"></td>
+            <td id="txt_phepnhan"></td>
+            <td id="txt_phepchia"></td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

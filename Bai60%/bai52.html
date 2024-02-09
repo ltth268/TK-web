@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <script type="text/javascript" src="bai2.js"></script>
+    <script>
+        function kiemTraChanLe(number) {
+    if (isNaN(number)) {
+        alert("Vui lòng nhập một số.");
+    } else if (number % 2 === 0) {
+        alert("Số " + number + " là số chẵn");
+    } else {
+        alert("Số " + number + " là số lẻ");
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="details-container">
+    <h1>Kiểm tra số chẵn lẻ</h1>
+    <input type="text" id="number" placeholder="Nhập số">
+    <button onclick="kiemTra()">Kiểm tra</button>
+    <script type="text/javascript">
+        function kiemTra() {
+            var number = parseInt(document.getElementById("number").value);
+            kiemTraChanLe(number);
+        }
+    </script>
+    </div>
+</body>
+</html>

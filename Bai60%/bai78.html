@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bài 8</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="bai8.css"/>
+  <style>
+    * {box-sizing: border-box;}
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navbar {
+  overflow: hidden;
+  padding: 10px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+#navbar a:hover {
+  background-color: rgb(65, 65, 110);
+  color: rgb(255, 255, 255);
+}
+#navbar-right {
+  float: right;
+}
+.topnav {
+  overflow: hidden;
+}
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav .icon {
+  display: none;
+}
+@media  (max-width: 768px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
+  }
+}
+.home{
+    padding-top: 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://cdn1.tuoitre.vn/zoom/600_315/tto/i/s626/2015/10/16/hinh-9-1444965982.jpg');
+    background-size: cover;
+    padding: 100px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgb(65, 65, 110);
+ }
+ #main-content{
+  display: flex;
+  background-color:whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgb(65, 65, 110);
+}
+#content{
+  flex-basis: 30%;
+}
+#content1{
+  flex-basis: 70%;
+}
+#sidebar{
+  display: flex;
+  color: white;
+}
+#sidebar1{
+  flex-basis: 50%;
+  background-color:rgba(74,78,105,1);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.met{display: flex;}
+.met1{flex-basis: 65%;}
+.met2{flex-basis: 30%;}
+#sidebar2{
+  flex-basis: 50%;
+  background-color:rgba(74,78,105,1);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.thuoc{display: flex;
+color: white;}
+#thuoc1{flex-basis: 33%;
+  background-color:rgba(74,78,105,1);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+#thuoc2{flex-basis: 33%;
+  background-color:rgba(74,78,105,1);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+#thuoc3{flex-basis: 33%;
+  background-color:rgba(74,78,105,1);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+#gt1{
+  background-color:rgba(74,78,105,1);
+  padding: 80px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgb(65, 65, 110);
+  color: #ffffff;
+}
+#gt{
+  background-color:whitesmoke;
+  padding: 100px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgb(65, 65, 110);
+}
+#tieude1{
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgb(65, 65, 110);
+  width: 120px;
+  height: 50px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+.centered-text {
+  position: absolute;
+  top: auto;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-decoration: none;
+}
+.centered-text:hover {
+  font-weight: bold;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "10px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("logo").style.color = "rgb(135, 135, 135)";
+    document.getElementById("myTopnav").style.color = "rgb(135, 135, 135)";
+  } else {
+    document.getElementById("navbar").style.padding = "10px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("logo").style.color = "#000";
+    document.getElementById("myTopnav").style.color = "#000";
+  }
+}
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+  </script>
+</head>
+<body>
+    <div class="details-container">
+  <div id="navbar">
+    <a href="#default" id="logo">Headache</a>
+    <div id="navbar-right">
+      <div class="topnav" id="myTopnav">
+        <a href="#">Home</a>
+    <a href="#main-content">Giới thiệu</a>
+    <a href="#gt1">Tác dụng phụ</a>
+    <a href="#gt">Phòng ngừa</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"> &equiv;</a>
+      </div>
+    </div>
+  </div>
+  <div class="home">
+    <h1 style="font-size: 50px;">Headache Medicine</h1>
+    <h2>Output is a common sign that almost everyone experiences</h2>
+    <p>Pain relievers are medications used to relieve headache symptoms<br>
+       There are many different types of pain relievers, and the medication depends on the type and intensity of the headache as well as individual factors</p>
+       <a id="tieude1" class="centered-text" href="#main-content" class="no-underline">Get started</a>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     <p style="color: transparent;">Headache Medicine</p>
+     </div>
+     <h1></h1>
+<div id="main-content">
+   <div id="content">
+   <h1 style="color:rgba(74,78,105,1);">Thuốc đau đầu là gì?</h1>
+   <a><img src="https://i.pinimg.com/564x/ce/99/b7/ce99b78b7aa74fe33fd3355bb5ec758f.jpg" alt="" width="100%"></a>
+   <p>Thuốc đau đầu là tên gọi chung của các loại thuốc giảm đau, được sử dụng nhằm cắt giảm cơn đau đầu hoặc phòng ngừa đau đầu. Các loại thuốc này thường được sử dụng cho người bệnh có cơn đau đầu ở nhiều cấp độ khác nhau.</p>
+   <h3>Có ba loại thuốc chữa đau đầu bao gồm:</h3>
+   <ul>
+       <li>Thuốc giảm đau và các triệu chứng khác thường gặp khi đau đầu.</li>
+       <li>Liệu pháp phòng ngừa để giảm tần suất và mức độ nghiêm trọng của cơn đau đầu.</li>
+       <li>Thuốc ngăn chặn các triệu chứng sau cơn đau đầu.</li>
+   </ul>
+   </div>
+ <div id="content1">
+ <div id="sidebar">
+   <div id="sidebar1">
+     <h1>Đau đầu là gì?</h1>
+   <div class="met">
+   <div class="met1">
+     <p>Đau đầu diễn ra từ cấp độ nhẹ đến nặng. Có người chỉ đau ở một bên đầu hoặc đau nhức hết cả đầu. Có những trường hợp, đau đầu báo hiệu bạn đang mắc bệnh nguy hiểm cần đưa đi bệnh viện ngay, chứ dùng thuốc không hiệu quả. Dưới đây là các loại thuốc điều trị đau đầu thông thường.</p>
+   </div>
+   <div class="met2">
+     <a><img src="https://i.pinimg.com/564x/2e/dd/53/2edd53d9fd51901c1008c718af47c2b5.jpg" alt="" width="90%"></a>
+   </div>
+ </div>
+ </div>
+   <div id="sidebar2">
+   <h1>Đau đầu do đâu?</h1>
+   <h4>Cơn đau đầu được chia làm 2 nhóm chính:</h4>
+   <ul>
+     <li>Đau đầu nguyên phát: hơn 90% các cơn đau đầu thuốc nhóm này, không do tổn thương cấu trúc não bộ, bao gồm đau từng cụm, đau do căng cơ, đau nửa đầu Migraine,...</li>
+     <li>Đau đầu thứ phát: chiếm gần 10%, do cụ thể hoặc chấn thương đầu như u não, chấn thương sọ não, hội chứng tăng áp lực nội sọ, tim mạch, tai mũi họng, nhiễm khuẩn toàn thân cấp tính...</li>
+   </ul>
+ </div>
+ </div>
+ <h1 style="color:rgba(74,78,105,1);">Đau đầu uống thuốc gì?</h1>
+ <div class="thuoc">
+   <div id="thuoc1">
+     <a><img src="https://tamanhhospital.vn/wp-content/uploads/2023/01/thuoc-nhuc-dau.jpg" alt="" width="100%"></a>
+   <p>Acetaminophen là một hoạt chất thường được dùng trong các loại thuốc giảm đau đầu để làm dịu cơn đau đầu nhẹ đến trung bình. Sử dụng thuốc với liều lượng 1.000 mg có thể giúp một người bị đau đầu mức độ nặng giảm đau đầu trong vòng 2 giờ</p>
+   </div>
+   <div id="thuoc2">
+     <a><img src="https://tamanhhospital.vn/wp-content/uploads/2023/01/thuoc-giam-dau-dau.jpg" alt="" width="100%"></a>
+   <p>Ibuprofen có thể làm giảm cơn đau đầu, đặc biệt là những cơn đau đầu thường xuyên do căng thẳng. Hiệu quả của loại thuốc giảm đau đầu không kê đơn này có thể giúp cải thiện cơn đau ở mức độ trung bình và nặng trong 2 giờ hoặc hơn</p>
+   </div>
+   <div id="thuoc3">
+     <a><img src="https://tamanhhospital.vn/wp-content/uploads/2023/01/thuoc-tri-nhuc-dau.jpg" alt="" width="100%"></a>
+   <p>Thuốc Tramadol thuộc nhóm thuốc giảm đau trung ương loại opioid. Thuốc được bào chế ở dạng viên nén hoặc viên nang</p>
+   </div>
+ </div>
+</div>
+</div>
+<h1></h1>
+<div id="gt1">
+ <h1>Tác dụng phụ của thuốc giảm đau đầu</h1>
+ <p>Khi sử dụng thuốc đau đầu quá nhiều, dùng sai liều lượng có thể dẫn đến tình trạng phụ thuộc quá nhiều vào thuốc hoặc lờn thuốc, làm cho cơn đau đầu trở nên khó trị và xảy ra nhiều hơn.</p>
+ <p>Việc sử dụng thuốc giảm đau hàng ngày hoặc gần như hàng ngày có thể ảnh hưởng đến một số bộ phận của não. Đây là những bộ phận kiểm soát cảm giác đau và truyền đến hệ thần kinh.</p>
+ <p>Nếu lạm dụng thuốc trị đau đầu hoặc thuốc giảm đau đầu không kê đơn như aspirin, acetaminophen, ibuprofen,... các bộ phận này sẽ cảnh báo tín hiệu sai khiến đau đầu liên tục không dừng. Khi phụ thuộc vào thuốc, bạn cảm thấy đau và lúc nào cũng sử dụng để giảm đau. Hoặc bạn cũng có thể bị lờn thuốc, dùng thuốc không hiệu quả như trước.</p>
+ <p>Bên cạnh đó, việc lạm dụng thuốc đau đầu có thể làm giảm tác dụng của thuốc hay biện pháp tránh thai đang dùng.</p>
+ <p>Và tùy theo sức khỏe cơ thể, người bệnh khi dùng thuốc trị nhức đầu cũng có thể gặp các tác dụng phụ khác như:</p>
+ <ul>
+   <li>Ngứa ran</li>
+   <li>Da nổi đỏ, phát ban</li>
+   <li>Tê tay chân</li>
+   <li>Cảm thấy ớn lạnh hoặc người luôn nóng bừng Đau hàm, căng cơ Đau ngực</li>
+   <li>Chóng mặt Mệt mỏi hoặc buồn ngủ</li>
+   <li>Ợ chua, ợ nóng Đau bụng, khó tiêu, buồn nôn, tiêu chảy, táo bón hoặc các vấn đề liên quan đến tiêu hóa</li>
+   <li>Đổ mồ hôi hột liên tục</li>
+   <li>Tâm trạng thay đổi</li>
+   <li>Đau lưng</li>
+ </ul>
+</div>
+<h1></h1>
+<div id="gt">
+ <h1>Phòng ngừa đau đầu</h1>
+ <h3>Phòng ngừa chứng đau đầu hiệu quả</h3>
+ <p></p>
+ <ul>
+   <li>Nên kết hợp nghỉ ngơi, thư giãn từ 30 phút – 1 tiếng khi làm việc liên tục.</li>
+   <li>Tránh các môn thể thao nặng, tham gia hoạt động như đi bộ, yoga hay aerobic nhẹ.</li>
+   <li>Tránh nghiến răng, không để hàm trên chạm vào hàm dưới trừ khi nhai.</li>
+   <li>Uống ít nhất 8 ly nước mỗi ngày.</li>
+ </ul>
+ <h3>Thuốc phòng ngừa đau đầu</h3>
+ <p>Ngoài thuốc chữa đau đầu, bác sĩ có thể kê thêm thuốc phòng ngừa để ngăn cơn đau tái phát, lặp đi lặp lại. Các loại thuốc phòng ngừa đau đầu thường được kê toa như:</p>
+ <ul>
+   <li>Thuốc chống trầm cảm: ngăn chứng đau nửa đầu cho người căng đầu, đau đầu do căng thẳng. Tuy nhiên, vì nhóm thuốc này có thể để lại nhiều tác dụng phụ nghiêm trọng nên bác sĩ sẽ cân nhắc để người bệnh tự kiểm soát cơn đau bằng những biện pháp khác rồi mới sử dụng thuốc chống trầm cảm.</li>
+   <li>Thuốc giãn cơ: làm giảm căng cơ và cứng khớp khiến đau đầu.</li>
+   <li>Thuốc chống động kinh: hiệu quả kiểm soát tần suất các cơn đau đầu chuỗi.</li>
+   <li>Thuốc an thần: có thể dùng thêm các loại thuốc an thần để giúp người bệnh căng thẳng cảm thấy dễ chịu hơn.</li>
+ </ul>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="bai1.css">
+    <style>
+        body {
+  display: flex;
+  width: 100%;
+  height: 1430px;
+  font-family:'Roboto';
+}
+.body{
+    border: 1px solid rgb(255, 255, 255);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.leftcolumn {   
+  float: left;
+  width: 10%;
+  background-color: rgb(245, 239, 239);
+}
+.menu {
+  width: 130px;
+  height: 1430px;
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      overflow-y: auto;
+      z-index: 8;
+      text-align: center;
+  }
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 17px;
+  overflow: hidden;
+}
+.menu li {
+  display: block;
+  font-size: 13px;
+  margin-top: 6px;
+  font-style: normal;
+}
+.menu i:hover {
+  background-color: rgb(222, 222, 222);
+  border-radius: 50px;
+  width: 50px;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(100vh - 64px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;    
+}
+.rightcolumn {
+  float: left;
+  width: 90%;
+}
+#tieude{
+  border-radius: 25px;
+  background-image: url(https://lh3.googleusercontent.com/2OrUzHCRSI-V46Z1qJBh90usG6OkKwCbXN80FbrjkWoQz4VfoJjNAoQHLHPQRZWH7dI_m5I1gi48h6xMJ5pK6kkdXmUnXPe4VqwvEdo4QeWRjLV9Oew=w2400-rj);
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tieude1{
+  border-radius: 40px;
+  background: #0b57d0;
+  width: 170px;
+  height: 70px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+#tieude1:hover{background-color:#3d7adc;}
+a#a{color:white ;}
+.no-underline {text-decoration: none;}
+a{color: black;}
+.khung {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 300px;
+}
+.hop {
+  width: 340px;
+  height: 270px;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  text-align: center;
+}
+.khung1 {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 500px;
+}
+.hop1 {
+  width: 500px;
+  padding: 30px;
+  border-radius: 15px;
+}
+.hop2 {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hop2 img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+.khung :hover{
+  background-color: rgb(222, 222, 222);
+   border-radius: 15px;
+}
+.khung1 :hover{background-color: rgb(222, 222, 222);}
+.leftcolumn1{
+  float: left;
+  width: 50%;
+}
+.rightcolumn1{
+  float: left;
+  width: 50%;
+}
+#gg :hover{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <div class="details-container">
+    <div class="leftcolumn">
+        <div class="menu">
+            <ul>
+                <a href="https://m3.material.io/" class="no-underline">
+                <i class="material-icons">home</i>
+                <li>Home</li></a>
+                <p></p>
+                <a href="https://m3.material.io/get-started" class="no-underline">
+                  <i class="material-icons">apps</i>
+                <li>Get started</li></a>
+                <p></p>
+                <a href="https://m3.material.io/develop" class="no-underline">
+                <i class="material-icons">code</i>
+                <li>Develop</li></a>
+                <p></p>
+                <a href="https://m3.material.io/foundations" class="no-underline">
+                <i class="material-icons">book</i>
+                <li>Foundations</li></a>
+                <p></p>
+                <a href="https://m3.material.io/styles" class="no-underline">
+                <i class="material-icons">palette</i>
+                <li>Style</li></a>
+                <p></p>
+                <a href="https://m3.material.io/components" class="no-underline">
+                <i class="material-icons">add_circle</i>
+                <li>Components</li></a>
+                <p></p>
+                <a href="https://material.io/blog/" class="no-underline">
+                <i class="material-icons">pages</i>
+                <li>Blog</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="body">
+            <div id="tieude">
+            <h1>Material Design</h1>
+            <p>Material 3 is the latest version of Google’s open-source design system. Design and build beautiful, usable products with Material 3.</p>
+            <p id="tieude1"><a id="a" href="https://m3.material.io/get-started" class="no-underline">Get started</a></p>
+            </div>
+            <div id="body">
+                <h1>News & launches</h1>
+                <h1 style="color: white;">hi</h1>
+                <div class="khung">
+                    <div class="hop"><a href="https://www.figma.com/community/file/1035203688168086460/material-3-design-kit" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/mLGakWFjdX3zGBIhCUWqzjlj3gUXOY8hOed_ISzomlpNmjKWUiqCFyNGGAZFneVaK30v4GUpjn7lyIsI2Z7KPvMKrYkumzBr2nwbVe3BQKRkpam3sA=w960">
+                        <h2>Figma design kit</h2>
+                        <p>Jumpstart your M3 designs with the complete library of ready-made components</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="hop"><a href="https://material.io/blog/material-you-large-screens" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/aiJojq_gpPLqLhU0PZH6Dog-OjIMti_hiclF_6oqxucGuvywn_AEtu2Qrk2f4WxEhRWMjXkz8qXpTCGoj5TZ0DUCEZ5UIXnXTSIu_7ndg2dTNmQbdkCO=w960">
+                        <h2>Large scree guidance</h2>
+                        <p> Get started adapting your layouts for a range of window size classes and hardware</p>
+                    </div>
+                        </a>
+                    </div>
+                    <div class="hop"><a href="https://material.io/blog/material-google-io23" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/51moDkmVWptBFXRReuACKocS_fsOoYtfT-C78onEUKeRr7ky4l_ZsuZMK2AnE7-MPRbLzcKTAIFmNyyN7ACo0-eygmXaGeR0ItYtRcYNE8-_L8RHqkA=w960">
+                        <h2>Material Design at Google I/O</h2>
+                        <p>See the full list of Material talks and tutorials launching at I/O 2023</p>
+                    </div>
+                        </a>
+                    </div>   
+                  </div>
+                  <h1 style="color: white;">hi</h1>
+                <h1>Design system updates</h1>
+                <h1 style="color: white;">hi</h1>
+                <div class="khung">
+                    <div class="hop"><a href="https://m3.material.io/develop/android/jetpack-compose" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/AG8Da4Doz97XcS62XgVOYWiRwcwgZZdhJOeejfA9bhzY8K5cyhsy753fFaNgkZjcTXA7MwQnPOa9FjKaFFoOVDGVh33PutwuflvNCXkfBS7AR5GbeQ=w960">
+                        <h2>M3 Jetpack Compose</h2>
+                        <p>With the latest stable release use Jetpack Compose to build a complete M3 Android app</p>
+                    </div>
+                        </a>
+                    </div>
+                    <div class="hop"><a href="https://m3.material.io/components/carousel/overview" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/IfqcD9hZWV1tohxFc8gyiP9kVjz0Igg1trtKkYD3qxvEziIxbnD2b8mCpmJqC015XWD14Pvwy-0vRUSJltvEa9tcY8TnWpO0zYJaR1IPjJlRrWpo3Q=w960">
+                        <h2>New component: M3 carousel</h2>
+                        <p>An expressive new component for displaying scrollable collections of content</p>
+                    </div>
+                        </a>
+                    </div>
+                    <div class="hop"><a href="https://m3.material.io/foundations/interaction/gestures" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/aLTg-FT4Ocgvjw1B_i3fOVK-rWoV3C7XCHyBkKwSbJFzIZtJjo-5atBHcSs9aZdHxiMw8-nP3lCnULJtFG_KdIVg7Gk-NV8sc1DJkeMRsTtir9pIu6IY=w960">
+                        <h2>Back navigation & gestures</h2>
+                        <p>Explore new motion and gesture capabilities for smooth navigation across screens</p>
+                    </div>
+                        </a>
+                    </div>   
+                </div>
+                <h1 style="color: white;">hi</h1>
+                <div class="khung">
+                    <div class="hop"><a href="https://m3.material.io/styles/motion/overview" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/QTSOFxOaVde6gu-lNjTZ_VrOh7ihpSgRc-hErsBVjQ4Te9tIj4cW4BNWXj2fy1WbDnWYNS3v6pO628xBLC-A74K7ylf0ODNz-jbNhM1OUCgTUvZSN3zP=w960">
+                        <h2>Motion system updates</h2>
+                        <p>Get started applying motion, from ready-to-use transition patterns to updated guidance</p>
+                    </div>
+                        </a>
+                    </div>
+                    <div class="hop"><a href="https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/w0mg7Iy0YoeV7ViHTp9XRzZFTbCX-ME87HPfbv_XFFZlQ-D6tjVwxsY1X_HUrFiXf-kNp8LePGcqv2Oh3OiNU6J28BYhiTf8UQKJBRDYPZejkpKE0NQ=w960">
+                        <h2>Material Theme Builder</h2>
+                        <p>Easily migrate or get started with the M3 color system and dynamic color</p>
+                    </div>
+                        </a>
+                    </div>
+                    <div class="hop"><a href="https://m3.material.io/styles/color/system/overview" class="no-underline">
+                        <div class="hop2"><img src="https://lh3.googleusercontent.com/560ITYkB-YZ3Hc2f0s-i9doX7kqOZ_CNnuzS7XtPolT6zfcKk7PW2TCSlD61OkSAu9eLXn1U404j5Sc4tZNZh-j4IscbCgHURVy1eC7fGtFESdOQMdhm=w960">
+                        <h2>New color guidance for tones</h2>
+                        <p>Updates include tone-based surface colors, contrast modes, and fixed accent colors</p>
+                    </div>
+                        </a>
+                    </div>   
+                </div>
+                <h1 style="color: white;">hi</h1>
+                <h1>Resources</h1>
+                <div class="khung1">
+                    <div class="hop1"><a href="https://material.io/blog/" class="no-underline">
+                        <h2>Material blog</h2>
+                        <p>News, tutorial, and inspiration from the Material team</p>
+                        </a>
+                    </div>
+                    <div class="hop1"><a href="https://www.figma.com/community/file/1035203688168086460/material-3-design-kit" class="no-underline">
+                        <h2>Figma design kit</h2>
+                        <p>Customizable styles and components to help you design with Material 3</p>
+                        </a>
+                    </div>
+                </div>
+                <p></p>
+                <div class="khung1">
+                    <div class="hop1"><a href="https://m3.material.io/get-started" class="no-underline">
+                        <h2>Get started</h2>
+                        <p>Guides, video, and tools to start building with Material</p>
+                    </a>
+                    </div>
+                    <div class="hop1"><a href="https://m3.material.io/develop" class="no-underline">
+                        <h2>Develop</h2>
+                        <p>Code and developr documentation for Android, Flutter, and the Web</p>
+                    </a>
+                    </div>
+                </div>
+                <hr>
+            <div class="leftcolumn1">
+            <h1><i class="material-icons">home</i></h1>
+            <p>Material Design is an adaptable system of</br>
+                guidelines, components, and tools that support</br>
+                the best practices of user interface design.</br>
+                Backed by open-source code, Material Design</br>
+                streamlines collaboration between designers</br>
+                and developers, and helps teams quickly build</br>
+                beautiful products.</p>
+            </div>
+            <div class="rightcolumn1">
+                <table style="width:100%">
+                    <tr>
+                        <td>Social</td>
+                        <td>Libraries</td>
+                        <td>Archived versions</td>
+                      </tr>
+                      <tr style="color: rgb(54, 142, 201);">
+                        <td>GitHub</td>
+                        <td>Android</td>
+                        <td>Material Design 1</td>
+                      </tr>
+                      <tr style="color: rgb(54, 142, 201);">
+                          <td>Twitter</td>
+                          <td>Compose</td>
+                          <td>Material Design 2</td>
+                        </tr>
+                        <tr style="color: rgb(54, 142, 201);">
+                            <td>YouTube</td>
+                            <td>Compose</td>
+                          </tr>
+                          <tr style="color: rgb(54, 142, 201);">
+                            <td>Blog RSS</td>
+                            <td>Web</td>
+                          </tr>
+                </table>
+            </div>  
+            </div>
+            <table style="width:70%">
+                <tr id="gg">
+                    <th>Google</th>
+                    <td>Privacy Policy</td>
+                    <td>Terms of Service</td>
+                    <td>Join research studies</td>
+                    <td>Feedback</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

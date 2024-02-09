@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My information </title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+  <style>
+body {
+      margin: 0;
+      font-family: 'Roboto Slab';
+      color: white;
+    }
+    .top {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, rgb(132, 182, 242), rgb(226, 114, 151));
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+    .top1 {
+      text-align: center;
+      padding-top: 5px;
+    }
+    .top2 {
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to bottom, rgb(226, 114, 151), rgb(132, 182, 242));
+    }
+    #menu ul {
+      background: rgb(132, 182, 242);
+      list-style-type: none;
+      text-align: center;
+      
+      top: 100px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #menu li {
+      color: #f1f1f1;
+      display: inline-block;
+      width: 250px;
+      height: 40px;
+      line-height: 40px;
+    }
+    #menu a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      display: block;
+    }
+    #menu a:hover {
+      background: rgb(226, 114, 151);
+      color: #ffffff;
+    }
+    .sub-menu ul {
+      background-color: rgb(132, 182, 242);
+    }
+    .sub-menu li {
+      display: none;
+      text-align: left;
+      margin-left: -39px;
+      background-color: rgb(132, 182, 242);
+      border-bottom: 1px solid pink;
+    }
+    #menu li {
+      position: relative;
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+    }
+    #menu li:hover .sub-menu {
+      display: block;
+    }
+    .menu {
+      margin-top: 150px;
+    }
+    #body{
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+.khung {
+  display: grid;
+  grid-template-columns: repeat(1, 100px);
+  grid-gap: 50px;
+}
+.hop {
+  width: 1235px;
+  height: 500px;
+  padding: 30px;
+  border: 3px dashed white;
+  background: linear-gradient(to bottom,rgb(226, 114, 151),rgb(132, 182, 242),rgb(226, 114, 151));
+}
+.image-with-text {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .image-with-text img {
+            margin-right: 10px;
+        }
+  </style>
+</head>
+<body>
+    <div class="details-container">
+    <header>
+		<div class="top">
+			<div class="top1"><h1>MY INFORMATION</h1></div>
+		</div>
+        <div class="menu">
+			<div id="menu">
+			  <ul>
+			  	<li><a href="#">TRANG CHỦ</a></li>
+                  <li><a href="#t1">GIỚI THIỆU BẢN THÂN</a></li>
+			    <li><a href="#t2">THÔNG TIN LIÊN HỆ</a></li>
+			    <li><a href="https://ltth.w3spaces.com/Main/Main.html">BÀI TẬP</a></li>
+                <li><a href="#"><i class="fas fa-bars menu-icon"></i></a></a>
+                    <ul class="sub-menu">
+                        <li><a href="#t1">GIỚI THIỆU BẢN THÂN</a></li>
+                        <li><a href="#t2">THÔNG TIN LIÊN HỆ</a></li>
+                        <li><a href="https://ltth.w3spaces.com/Main/Main.html">BÀI TẬP</a></li>
+                    </ul>
+                </li>
+			  </ul>
+			</div>
+		</div>
+	</header>
+<div id="body">
+    <div class="khung">
+        <div class="hop">
+            <div id="t">
+                <div class="image-with-text">
+                    <img src="https://i.pinimg.com/736x/a3/d9/39/a3d93925c18ebce95ed61c6e05b85813.jpg" alt="" width="500">
+                    <p>-HELLO-</br>
+                        ---------</br>
+                        Đây là trang web giới thiệu về bản thân tôi</br>
+                        Cũng là bài tập thuộc môn thiết kế web</br>
+                        Kéo xuống dưới để xem thêm thông tin</br>
+                        Hoặc có thể chọn các thẻ trên thanh điều hướng</br>
+                        Xin cảm ơn._.</br>
+                        ---------</br>
+                        -BYE-
+                    </p>
+                  </div>
+            </div>
+        </div>
+    <div class="hop">
+        <div id="t1">
+        <h2>Thông tin cá nhân</h2>
+    <ul>
+        <li>Họ và tên: Lê Thị Thu Hoài</li>
+        <li>Ngày sinh: 26/08/2004</li>
+    </ul>
+    <h2>Học vấn</h2>
+    <ul>
+        <li>Trường: Trường đại học Thủ Đô Hà Nội</li>
+        <li>Chuyên ngành: Công nghệ thông tin</li>
+        <p>Nếu bạn muốn tìm hiểu về trường của tôi bạn có thể vào đây =><a href="https://daotao.hnmu.edu.vn/">HNMU</a></p>
+    </ul>
+    <h2>Sở thích</h2>
+    <ul>
+        <li>Thích mèo</li>
+        <li>Ngủ</li>
+        <li>Đọc sách</li>
+        <li>Nghe nhạc</li>
+    </ul>
+    </div>
+    </div>
+    <div class="hop">
+            <div id="t2">
+            <h2>Thông tin liên hệ</h2>
+            <p>Số điện thoại
+                 <ul>
+                    <li>0389xxx577</li>
+                </ul>
+                </p>
+            <p>Gmail
+                <ul>
+                    <li>222001449@daihocthudo.edu.vn</li>
+                    <li>222001449@ms.daihocthudo.edu.vn</li>
+                </ul>
+            </p>
+            <p>Mạng xã hội
+                <ul>
+                    <li>FACEBOOK</li>
+                    <li>ZALO</li>
+                    <li>INSTAGRAM</li>
+                </ul>
+            </p>
+        </div>
+    </div> 
+  </div>
+ </div> 
+<footer class="top2">
+    <p>@ 222001449@daihocthudo.edu.vn </p>
+</footer>
+    </div>
+</body>
+</html>

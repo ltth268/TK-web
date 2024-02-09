@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bai5.css">
+    <style>* {
+        padding:0;
+        margin: 0;
+        box-sizing: 0;
+        text-decoration: none;
+        list-style: none;
+      }
+      body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+      header {
+        margin-top: 50px;
+        height: 50px;
+        position: sticky;
+        top: 50px;
+        z-index: 9999;
+      }
+      .menu {
+        display: flex;
+        margin-left: 7%;
+        margin-right: 7%;
+        justify-content: space-between;
+        line-height: 50px;
+      }
+      .menu img {
+        width: 45px;
+      }
+      .menu ul li a {
+        color: white;
+        font-size: 30px;
+        position: relative;
+      }
+      .menu ul li a:after {
+        content:'';
+        position: absolute;
+        bottom:0;
+        left:0%;
+        width:0%;
+        height:2px;
+        background-color: rgb(255, 255, 255);
+       transition: 0.4s;
+      }
+      .menu ul li a:hover:after {
+        width:100%;
+       left:0;
+      }
+      .menu ul {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 80%;
+        padding-top: 150px;
+        top: -50px;
+        position: fixed;
+        z-index: -1;
+        left: -100%;
+      }
+      #menumenu:checked ~ ul {
+        left: 0;
+      }
+      header input {
+        display: none;
+      }
+      hr{
+        opacity: 0.5;
+        position:relative;
+        top:100px;
+      }
+      .leftcolumn{
+      float: left;
+      color: white;
+      width: 50%;
+      position:relative;
+        top:105px;
+    }
+    .rightcolumn{
+      right: -250px;
+      float: left;
+      color: white;
+      position:relative;
+        top:120px;
+        display: flex;
+        font-size: 20px;
+    }
+    .rightcolumn i {
+      margin-right: 10px;
+    }
+    .rightcolumn i:last-child {
+      margin-right: 0;
+    }
+    .tieude{
+      width: fit-content;
+      margin-top: 110px;
+      margin-left:7%;
+      font-size: 45pt;
+    }
+    .tieude1{
+      background-color: #000;
+      color:white;
+      text-align: center;
+        margin-left: 6px;
+        margin-right: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .menu1{
+      position: relative;
+      top: 100px;
+    }
+    a.chu {
+      position: relative; 
+      font-family: segoe ui;
+      text-decoration: none; 
+      font-size: 20px;
+      left:7%;
+      color: black;
+        margin-right: 20px;
+    }
+    a.chu:after{
+        content:'';
+        position: absolute;
+        bottom:0;
+        left:0%;
+        width:0%;
+        height:2px;
+        background-color: rgb(0, 0, 0);
+       transition: 0.4s; 
+    }
+    a.chu:hover:after{
+    width:100%;
+       left:0;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Chia thành ba cột bằng nhau */
+      grid-gap: 10px;
+      position:relative;  
+      width: calc(100% - 6cm);
+      margin: 3cm auto;
+      padding: 3cm;
+    }
+    .leftcolumn1, .centercolumn1, .rightcolumn1 {
+      padding: 20px;
+    color: white;
+    }
+    .bo, .lop1, .lop2, .lop3{
+      width:340px;
+      height:250px;
+    }
+    .bo{
+      position: relative;
+      overflow: hidden;
+    }
+    .bo .lop1{
+      top:0;
+      left:0;
+      position: absolute;
+      transition: 0.4s;
+    }
+    .bo .lop2{
+      opacity:0;
+      position: absolute;
+      top:45px;
+      left:45px;
+      width: 250px;
+      height: 170px;
+      background-color: rgb(255, 255, 255);
+      transition: 0.4s;
+    }
+    .bo:hover .lop2{
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+    .bo .lop3{
+      position: absolute;
+      top: 90px;
+      left: 55px;
+      color: rgb(0, 0, 0);
+      opacity:0;
+      transition: 0.4s;
+    }
+    .bo:hover .lop3{
+      opacity: 1;
+    }
+    .bo1, .lop1, .lop2, .lop3{
+      width:340px;
+      height:370px;
+    }
+    .bo1{
+      position: relative;
+      overflow: hidden;
+    }
+    .bo1 .lop1{
+      top:0;
+      left:0;
+      position: absolute;
+      transition: 0.4s;
+    }
+    .bo1 .lop2{
+      opacity:0;
+      position: absolute;
+      top:45px;
+      left:45px;
+      width: 250px;
+      height: 270px;
+      background-color: rgb(255, 255, 255);
+      transition: 0.4s;
+    }
+    .bo1:hover .lop2{
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+    .bo1 .lop3{
+      position: absolute;
+      top: 90px;
+      left: 55px;
+      color: rgb(0, 0, 0);
+      opacity:0;
+      transition: 0.4s;
+    }
+    .bo1:hover .lop3{
+      opacity: 1;
+    }</style>
+</head>
+<body>
+    <div class="details-container">
+    <header>
+        <div class="menu">
+         <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/06/Kalium-Theme-Icon.png" alt="">
+         <input type='checkbox' id='menumenu' name=''>
+         <label for="menumenu"><p><i class="fas fa-bars menu-icon"></i></p></label>
+         <ul>
+            <li><a href="" style="margin-left: 70%;"><i class="fas fa-times close-icon"></i></a></li>
+             <li><a href="">Home</a></li>
+             <li><a href="">Portfolio</a></li>
+             <li><a href="">Team</a></li>
+             <li><a href="">Services</a></li>
+             <li><a href="">Blog</a></li>
+             <li><a href="">Contact</a></li>
+             <li><a href="">Buy Now!</a></li>
+             <li><a href="" style="color: gray;">Search...</a></li>
+             <hr>
+             <div class="leftcolumn"><p>Copyright 2023| kalium Theme by Laborator</p></div>
+                <div class="rightcolumn">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+         </ul>
+        </div>
+     </header>
+     <div class="body">
+        <div class="tieude">
+            <p>Clear thinking at the wrong moment can <br>
+            stifle</span><span class="tieude1">creativity_</span>
+        </div>
+        <div class="menu1">
+            <a href="" class="chu"><span>All</span></a>
+            <a href="" class="chu"><span>Brading</span></a>
+            <a href="" class="chu"><span>Digital Art</span></a>
+            <a href="" class="chu"><span>Photography</span></a>
+            <a href="" class="chu"><span>Print</span></a>
+        </div> 
+        <div class="container">
+            <div class="leftcolumn1">
+                <div class="bo">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/05/adestra-c-300x200.jpg" class="lop1">
+                    <div class="lop2"></div>
+                    <div class="lop3">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <h1>ADESTRA</h1>
+                        <P>Branding, Print</P>
+                    </div>
+                </div>
+                <p>hi</p>
+                <div class="bo">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2015/03/cloud-inc-c-300x200.jpg"class="lop1">
+                    <div class="lop2"></div>
+                    <div class="lop3">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <h1>CLOUD INC</h1>
+                        <P>Print</P>
+                    </div>
+                </div>
+            </div>
+            <div class="centercolumn1">
+                <div class="bo1">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/desk-concept-c-468x468.jpg" class="lop1">
+                    <div class="lop2"></div>
+                    <div class="lop3">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <h1>CLOUD INC</h1>
+                        <P>Photography</P>
+                    </div>
+                </div>
+                <p>hi</p>
+                <div class="bo">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/capricho-c-300x182.jpg"class="lop1">
+                    <div class="lop2"></div>
+                    <div class="lop3">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <h1>CAPRICHO</h1>
+                        <P>Digital Art</P>
+                    </div>
+                </div>
+            </div>
+            <div class="rightcolumn1">
+                <div class="bo">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/multi-color-c-300x199.jpg" class="lop1">
+                    <div class="lop2"></div>
+                    <div class="lop3">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <h1>MULTI COLOR</h1>
+                        <P>Digital Art</P>
+                    </div>
+                </div>
+                <p>hi</p>
+                <div class="bo">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/ethics-for-design-c-300x200.jpg"class="lop1">
+                    <div class="lop2"></div>
+                    <div class="lop3">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <h1>ETHICS FOR DESIGN</h1>
+                        <P>Print</P>
+                    </div>
+                </div>
+            </div>
+    </div> </div>
+</body>
+</html>
